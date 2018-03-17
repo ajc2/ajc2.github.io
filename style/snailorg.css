@@ -1,0 +1,180 @@
+/*------------------------------
+  Stylesheet for Org HTML Export
+  by snail_ 2017
+  version 2.1.0
+  ------------------------------*/
+
+/*
+  To get started, put this at the beginning of your org document:
+  #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/style/snailorg.css" />
+  #+HTML_HEAD: <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=yes">
+*/
+
+/* load fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab|Roboto+Mono');
+
+/* variable declarations */
+:root {
+  --border: 1px solid #F0F0F0;
+}
+
+
+/* layout, flow, base appearance */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+    background-color: #F8F8FC;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-weight: normal;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    min-height: 100vh;
+    max-width: 800px;
+    width: 100%;
+    border-left: var(--border);
+    border-right: var(--border);
+    background-color: #FCFCFC;
+    box-shadow: 0 0 3rem 1rem #EEE;
+}
+
+#content {
+    flex: 1 0 auto;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+}
+
+#postamble {
+    margin: 0;
+    width: 100%;
+    border-top: var(--border);
+    padding: 0.5rem 1rem;
+    background-color: #FCF8F8;
+}
+
+#table-of-contents {
+    margin: 0 auto;
+    padding: 0;
+    border-bottom: var(--border);
+}
+
+
+/* markup */
+#postamble p.validation {
+    display: none;
+}
+
+#postamble p {
+    text-indent: 0;
+}
+
+code {
+    font-family: 'Roboto Mono', monospace;
+    color: #111;
+}
+
+pre {
+    padding: 0.5rem;
+    box-shadow: none;
+    border: var(--border);
+    margin: 1rem auto;
+}
+
+pre.src {
+    font-family: 'Roboto Mono', monospace;
+    padding-top: 0.5rem;
+    background-color: #FAFAFA;
+    color: black;
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+h5 {
+    font-weight: 300;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+h6 {
+    font-weight: 300;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+p {
+    text-align: justify;
+    text-indent: 1.5rem;
+}
+
+p.verse {
+    text-indent: 0;
+}
+
+p.footnote {
+    text-indent: 0;
+}
+
+a:link {
+    color: #6A5ACD;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #8B4789;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: #9F79EE;
+    background-color: hsla(62, 100%, 58%, 20%);
+}
+
+div.figure {
+    margin: 1rem auto;
+    padding: 0;
+}
+
+div.figure img {
+    max-width: 100%;
+    height: auto;
+}
